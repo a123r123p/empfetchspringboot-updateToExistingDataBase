@@ -19,15 +19,15 @@ A professional RESTful web application built using **Spring Boot** for managing 
 
 ## 🛠️ Tech Stack
 
-| Technology      | Description                |
-| --------------- | -------------------------- |
-| Java            | Core Programming Language  |
-| Spring Boot     | Backend Framework          |
-| Spring Data JPA | Database Operations        |
-| Maven           | Dependency Management      |
-| REST API        | Communication Architecture |
-| MySQL / H2      | Database Support           |
-| Lombok          | Boilerplate Code Reduction |
+| Technology              | Description                |
+| ---------------         | -------------------------- |
+| Java                    | Core Programming Language  |
+| Spring Boot             | Backend Framework          |
+| Spring Data JPA         | Database Operations        |
+| Maven                   | Dependency Management      |
+| REST API                | Communication Architecture |
+| Oracle(sqlplus)/H2      | Database Support           |
+| Lombok                  | Boilerplate Code Reduction |
 
 ---
 
@@ -77,9 +77,9 @@ cd empfetchspringboot
 Update the `application.properties` file:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/employee_db
-spring.datasource.username=root
-spring.datasource.password=yourpassword
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:ORCL
+spring.datasource.username=C##SCOTT
+spring.datasource.password=tiger
 spring.jpa.hibernate.ddl-auto=update
 ```
 
@@ -110,19 +110,6 @@ EmpfetchspringbootApplication.java
 | POST   | `/employees`      | Add new employee     |
 | PUT    | `/employees/{id}` | Update employee      |
 | DELETE | `/employees/{id}` | Delete employee      |
-
----
-
-## 📬 Sample JSON Request
-
-```json
-{
-  "id": 1,
-  "name": "John Doe",
-  "department": "IT",
-  "salary": 50000
-}
-```
 
 ---
 
